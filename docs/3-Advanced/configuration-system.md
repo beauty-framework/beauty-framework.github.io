@@ -103,7 +103,6 @@ App\Container\Config\RegisterConfig
 ## 📚 Related Docs
 
 * [Installation / Configuration](../1-Installation/configure.md)
-* [Installation / Configs](../1-Installation/Configs)
 * [Installation / Configs / database](../1-Installation/Configs/database.md)
 * [Installation / Configs / cache](../1-Installation/Configs/cache.md)
 
