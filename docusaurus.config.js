@@ -28,8 +28,9 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'beauty-framework', // Usually your GitHub org/user name.
-  projectName: 'Beauty Framework', // Usually your repo name.
-
+  projectName: 'beauty-framework.github.io', // Usually your repo name.
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
