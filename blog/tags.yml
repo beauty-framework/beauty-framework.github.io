@@ -1,0 +1,9 @@
+release:
+  label: Release
+  permalink: /release
+  description: Release
+
+beta:
+  label: Beta
+  permalink: /beta
+  description: Beta
