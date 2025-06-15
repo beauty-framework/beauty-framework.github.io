@@ -95,7 +95,8 @@
 | `beauty-framework/scheduler` | Scheduler with `commands` supports                                |
 | `beauty-framework/orm`       | Lightweight query builder and migrations                          |
 | `beauty-framework/testing`   | Advanced test utilities, CLI test runner                          |
-| `beauty/config`              | Full-featured env/config system (done in `core`, may split later) |
+| `beauty-framework/config`    | Full-featured env/config system (done in `core`, may split later) |
+| `beauty-framework/log`       | Built-in loggers                                                  |
 
 ## 📘 Documentation
 
@@ -114,6 +115,8 @@
 * Built-in Swagger/OpenAPI generator
 * WebSocket Gateway (RR broadcast integration)
 * Microservice skeletons and templates
+* External ORM supports (`beauty-framework/doctrine-orm` for example)
+* Package for `grafana`/`loki` integration (`beauty-framework/monitoring`) 
 
 ---
 
