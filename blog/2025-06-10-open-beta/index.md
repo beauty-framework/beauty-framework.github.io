@@ -5,7 +5,7 @@ authors: [m1n64]
 tags: [beta]
 ---
 
-## Beauty Framework now in open beta!
+### Beauty Framework now in open beta!
 
 
 
