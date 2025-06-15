@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbeauty_docs=self.webpackChunkbeauty_docs||[]).push([[8121],{8070:e=>{e.exports=JSON.parse('{"tags":[{"label":"Beta","permalink":"/blog/tags/beta","description":"Beta","count":2}]}')}}]);

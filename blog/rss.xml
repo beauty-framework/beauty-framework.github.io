@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Beauty Framework Blog</title>
+        <link>https://beauty-framework.github.io/blog</link>
+        <description>Beauty Framework Blog</description>
+        <lastBuildDate>Sun, 15 Jun 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[gRPC Component for Beauty Framework now in Beta]]></title>
+            <link>https://beauty-framework.github.io/blog/grpc-component-now-in-beta</link>
+            <guid>https://beauty-framework.github.io/blog/grpc-component-now-in-beta</guid>
+            <pubDate>Sun, 15 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[gRPC Component now in github repo.]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="grpc-component-now-in-github-repo">gRPC Component now in github repo.<a href="https://beauty-framework.github.io/blog/grpc-component-now-in-beta#grpc-component-now-in-github-repo" class="hash-link" aria-label="Direct link to gRPC Component now in github repo." title="Direct link to gRPC Component now in github repo.">​</a></h3>
+<p>Use it!</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">make</span><span class="token plain"> </span><span class="token function" style="color:#d73a49">composer</span><span class="token plain"> require beauty-framework/grpc</span><br></span></code></pre></div></div>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">make</span><span class="token plain"> beauty grpc:install</span><br></span></code></pre></div></div>
+<p>Full instruction in github repositoru.</p>
+<p>Github repo: <a href="https://github.com/beauty-framework/grpc" target="_blank" rel="noopener noreferrer">https://github.com/beauty-framework/grpc</a></p>
+<p>Example app: <a href="https://github.com/beauty-framework/example-grpc" target="_blank" rel="noopener noreferrer">https://github.com/beauty-framework/example-grpc</a></p>]]></content:encoded>
+            <category>Beta</category>
+        </item>
+        <item>
+            <title><![CDATA[Framework in open beta]]></title>
+            <link>https://beauty-framework.github.io/blog/first-open-beta</link>
+            <guid>https://beauty-framework.github.io/blog/first-open-beta</guid>
+            <pubDate>Tue, 10 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Beauty Framework now in open beta!]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="beauty-framework-now-in-open-beta">Beauty Framework now in open beta!<a href="https://beauty-framework.github.io/blog/first-open-beta#beauty-framework-now-in-open-beta" class="hash-link" aria-label="Direct link to Beauty Framework now in open beta!" title="Direct link to Beauty Framework now in open beta!">​</a></h3>
+<p>The framework has been released in its first beta version and can be installed using the command</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token function" style="color:#d73a49">composer</span><span class="token plain"> create-project beuaty-framework/app</span><br></span></code></pre></div></div>
+<p>Github repo: <a href="https://github.com/beauty-framework/app" target="_blank" rel="noopener noreferrer">https://github.com/beauty-framework/app</a></p>
+<p>The first set of libraries is also ready:</p>
+<ul>
+<li><a href="https://github.com/beauty-framework/core" target="_blank" rel="noopener noreferrer"><code>beauty-framework/core</code></a>: Framework core library</li>
+<li><a href="https://github.com/beauty-framework/http" target="_blank" rel="noopener noreferrer"><code>beauty-framework/http</code></a>: PSR-7 request/response wrappers</li>
+<li><a href="https://github.com/beauty-framework/validation" target="_blank" rel="noopener noreferrer"><code>beauty-framework/validation</code></a>: Laravel-like request validation</li>
+<li><a href="https://github.com/beauty-framework/database" target="_blank" rel="noopener noreferrer"><code>beauty-framework/database</code></a>: Lightweight query builder</li>
+<li><a href="https://github.com/beauty-framework/cache" target="_blank" rel="noopener noreferrer"><code>beauty-framework/cache</code></a>: PSR-6 cache adapter</li>
+<li><a href="https://github.com/beauty-framework/jobs" target="_blank" rel="noopener noreferrer"><code>beauty-framework/jobs</code></a>: Fiber-based job runner with RoadRunner support</li>
+<li><a href="https://github.com/beauty-framework/cli" target="_blank" rel="noopener noreferrer"><code>beauty-framework/cli</code></a>: Framework-aware CLI kernel</li>
+<li><a href="https://github.com/beauty-framework/parallels" target="_blank" rel="noopener noreferrer"><code>beauty-framework/parallels</code></a>: Parallel processing with Fibers (todo: RoadRunner)</li>
+</ul>]]></content:encoded>
+            <category>Beta</category>
+        </item>
+    </channel>
+</rss>
