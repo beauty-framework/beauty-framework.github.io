@@ -116,7 +116,7 @@
 * WebSocket Gateway (RR broadcast integration)
 * Microservice skeletons and templates
 * External ORM supports (`beauty-framework/doctrine-orm` for example)
-* Package for `grafana`/`loki` integration (`beauty-framework/monitoring`) 
+* Package for `grafana`/`loki` integration (`beauty-framework/monitoring`)
 
 ---
 
