@@ -12,9 +12,8 @@ This guide will walk you through the basics — from defining routes and control
 >
 > 👉 [https://github.com/beauty-framework/example-app](https://github.com/beauty-framework/example-app)
 
----
 
-### What you'll learn:
+## What you'll learn:
 
 * How to create a route and controller
 * How to define and validate request DTOs

@@ -15,7 +15,6 @@ You've now seen the fundamentals of working with Beauty Framework:
 
 🎉 You’re now ready to build powerful and elegant APIs with Beauty Framework!
 
----
 
 ## 🚀 What’s Next?
 
@@ -31,7 +30,6 @@ Check out the **Advanced** section to dive deeper into:
 
 👉 [Go to Advanced Section](../3-Advanced/overview.md)
 
----
 
 ## 📦 Example Application
 

@@ -4,7 +4,6 @@ This package provides powerful and extensible Collection, PaginatedCollection an
 
 > ⚠️ This is an **optional module**. You need to install and configure it manually.
 
----
 
 ## Installation
 
@@ -12,7 +11,6 @@ This package provides powerful and extensible Collection, PaginatedCollection an
 composer require beauty-framework/collection
 ```
 
----
 
 ## Overview
 
@@ -22,7 +20,6 @@ composer require beauty-framework/collection
 * Separate interfaces for operations, accessors, and lazy behavior.
 * Built-in support for alternative storages (`Array`, `Ds\Map`).
 
----
 
 ## Storages
 
@@ -30,7 +27,6 @@ By default collection use `ArrayStorage`, but if you install `ds` extension, col
 ```bash
 pecl install ds
 ```
----
 
 ## Usage
 
@@ -68,7 +64,6 @@ $first = $collection->first();
 $last = $collection->last();
 ```
 
----
 
 ## Lazy Collection
 
@@ -84,7 +79,6 @@ $result = $lazy
     ->toArray();
 ```
 
----
 
 ## Available Methods
 
@@ -107,7 +101,6 @@ $result = $lazy
 * `toArray()`
 * `count()`
 
----
 
 ## Interfaces
 
@@ -117,7 +110,6 @@ $result = $lazy
 * `SupportsAccessors`
 * `LazyCollectionInterface`
 
----
 
 ## API
 
@@ -181,10 +173,7 @@ like a `Collection`, but with method `paginate(int $perPage, int $page = 1)`
 * `IteratorAggregate::getIterator()`
   Required to support `foreach` loops.
 
----
 
 ## Resources
 
 - This package repo: https://github.com/beauty-framework/collection
-
----

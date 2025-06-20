@@ -12,7 +12,6 @@ Beauty is fully **PSR-compliant** (PSR-1, PSR-4, PSR-7, PSR-11, PSR-15, PSR-16),
 
 Each part of the framework is delivered as an independent package — allowing you to use only what you need. Whether you're building a simple REST API or a complex distributed system, Beauty gives you powerful tools without unnecessary overhead.
 
----
 
 ## Highlights
 
@@ -22,7 +21,6 @@ Each part of the framework is delivered as an independent package — allowing y
 * ✅ **PSR standards** — clean, interoperable, decoupled
 * 🔄 **Job & event system** — supports Fiber workers, RoadRunner jobs, and PSR-14 listeners
 
----
 
 ## Philosophy
 

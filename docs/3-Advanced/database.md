@@ -8,7 +8,6 @@ Beauty Framework provides a minimal yet flexible database layer via the [beauty-
 
 It supports direct SQL queries, transactions, and multiple connection types — while allowing for easy extensibility.
 
----
 
 ## 📦 Features
 
@@ -18,7 +17,6 @@ It supports direct SQL queries, transactions, and multiple connection types — 
 * Multiple driver support: PostgreSQL, MySQL, SQLite, SQL Server
 * Extendable `ConnectionInterface`
 
----
 
 ## ⚙️ Basic Usage
 
@@ -38,7 +36,6 @@ class MyService
 }
 ```
 
----
 
 ## 🔄 Transactions
 
@@ -53,7 +50,6 @@ $db->transaction(function (ConnectionInterface $tx) {
 
 If any exception is thrown — the transaction is rolled back.
 
----
 
 ## 🔧 Drivers and Configuration
 
@@ -105,9 +101,57 @@ return [
 ];
 ```
 
-For more details — including how to implement your own driver — see: [Configs/Database](../1-Installation/Configs/database.md)
+For details about configuration — see: [Configs/Database](../1-Installation/Configs/database.md)
 
----
+
+## 🛠️ Create custom driver
+
+For example for Oracle (abstract example):
+1. Implement `Beauty\Database\Connection\Drivers\DriverInterface`
+
+```php
+class OracleDriver implements DriverInterface
+{
+    public function supports(string $driver): bool {
+        return $driver === 'oracle';
+    }
+
+    public function make(array $config): ConnectionInterface {
+        $dsn = "oci:host=$config['host'];port=$config['port'];dbname=$config['db']";
+
+        $pdo = new PDO($dsn, $config['user'], $config['pass']);
+
+        return new PdoConnection($pdo);
+    }
+}
+```
+2. Add connection to `config/database.php` in `connections` section:
+```php
+return [
+    'default' => 'pgsql',
+    'connections' => [
+        'oracle' => [
+            'driver' => 'oracle',
+            'host' => '127.0.0.1',
+            'port' => 12343,
+            'db' => 'app',
+            'username' => 'user',
+            'password' => 'secret',
+        ],
+    ],
+];
+```
+3. Register it into `ConnectionFactory`:
+
+```php
+$factory = new ConnectionFactory([
+    // ...
+    new OracleDriver(),
+]);
+```
+
+For example - watch `Cockroach DB` driver in this repo - https://github.com/beauty-framework/cockroach-db-support
+
 
 ## 🔗 Repository
 
@@ -115,7 +159,6 @@ Database are implemented in the `beauty-framework/database` package (already con
 
 [https://github.com/beauty-framework/database](https://github.com/beauty-framework/database)
 
----
 
 ## 📌 Notes
 

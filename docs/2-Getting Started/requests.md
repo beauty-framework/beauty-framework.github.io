@@ -6,7 +6,7 @@ sidebar_position: 2
 
 To handle incoming input with validation, Beauty Framework provides a `ValidatedRequest` class that you can extend for custom logic.
 
-### ✨ Generate via CLI
+## ✨ Generate via CLI
 
 ```bash
 make beauty generate:request CreateUserRequest
@@ -16,9 +16,8 @@ make beauty generate:request CreateUserRequest
 
 This will generate a new request class in `app/Requests`.
 
----
 
-### 🧱 Example Request Class
+## 🧱 Example Request Class
 
 ```php
 namespace App\Requests;
@@ -50,9 +49,8 @@ protected array $attributes = [
 ];
 ```
 
----
 
-### ✅ Usage in Controller
+## ✅ Usage in Controller
 
 You can type-hint this request class directly:
 
@@ -67,9 +65,8 @@ public function store(CreateUserRequest $request): ResponseInterface
 }
 ```
 
----
 
-### 💡 Notes
+## 💡 Notes
 
 * If validation fails, a `400 Bad request` response is automatically returned
 * You can override `authorize()` if needed (e.g., for auth checks)

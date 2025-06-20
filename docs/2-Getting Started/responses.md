@@ -8,9 +8,8 @@ In Beauty Framework, you can create structured and reusable response classes by 
 
 A resource implements `ResponsibleInterface` and can be returned directly from a controller. Internally, it will be converted into a proper `JsonResponse`.
 
----
 
-### ✨ Example: UserResponse
+## ✨ Example: UserResponse
 
 ```php
 namespace App\Responses\User;
@@ -41,9 +40,8 @@ class UserResponse extends AbstractJsonResource
 
 This class is used to format the output structure of a single user.
 
----
 
-### ✅ Usage in Controller
+## ✅ Usage in Controller
 
 ```php
 use Beauty\Http\Response\Contracts\ResponsibleInterface;
@@ -75,7 +73,7 @@ public function store(CreateUserRequest $request): ResponsibleInterface
 }
 ```
 
-### 🔧 Custom Headers and Status Codes
+## 🔧 Custom Headers and Status Codes
 
 You can configure headers or status code fluently:
 
@@ -85,9 +83,8 @@ return (new UserResponse(...))
     ->setHeader('X-Custom-Header', 'Value');
 ```
 
----
 
-### 💡 Notes
+## 💡 Notes
 
 * This approach makes it easy to reuse response formats across multiple controllers
 * `jsonSerialize()` gives you full control over output structure

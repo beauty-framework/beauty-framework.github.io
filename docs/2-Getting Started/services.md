@@ -6,7 +6,6 @@ sidebar_position: 7
 
 Beauty Framework encourages keeping your **controllers thin** and **services focused**. Services are responsible for encapsulating business logic and can depend on repositories, helpers, loggers, and other components.
 
----
 
 ## 🧱 Example: AuthService
 
@@ -84,7 +83,6 @@ class AuthService
 }
 ```
 
----
 
 ## 🧾 Using a Service in Controller
 
@@ -135,7 +133,6 @@ class AuthController
 }
 ```
 
----
 
 ## 🧩 Notes
 

@@ -14,11 +14,10 @@ make beauty generate:controller HelloController
 
 This will generate a controller file in `app/Controllers`.
 
----
 
 In Beauty Framework, controllers are simple PHP classes where you define methods annotated with the `#[Route(...)]` attribute. This makes routing expressive and clean.
 
-### 📁 Example Directory
+## 📁 Example Directory
 
 Controllers typically live in `app/Controllers`, which is scanned automatically based on `config/router.php`. You can organize them into subfolders (e.g., `app/Controllers/Admin/`, `app/Controllers/API/`), and specify multiple paths in the config:
 
@@ -32,7 +31,7 @@ return [
 ];
 ```
 
-### 🚀 Example Controller
+## 🚀 Example Controller
 
 ```php
 namespace App\Controllers;
@@ -62,7 +61,16 @@ class HelloController
 
 This registers a `GET /hello` route which returns a JSON response.
 
-### ⚙️ Available HTTP Methods
+## ⛓️ Route path params
+
+To set path parameters, the following mechanism is used: parameters are set in the route and can be obtained as method (action) arguments. Support for optional parameters will be added in the future.
+
+```php
+    #[Route(HttpMethodsEnum::GET, '/tasks/{projectId}')]
+    public function index(HttpRequest $request, int $projectId): ResponseInterface
+```
+
+## ⚙️ Available HTTP Methods
 
 Beauty Framework supports all standard HTTP methods via `HttpMethodsEnum`:
 
@@ -84,14 +92,13 @@ These can be used when declaring routes:
 #[Route(HttpMethodsEnum::POST, '/submit')]
 ```
 
-### 🔧 Notes
+## 🔧 Notes
 
 * Methods can be named (`index`, `store`, etc.)
 * You can type-hint custom Request classes or dependencies in method arguments
 * Each controller and method can use additional attributes like `#[Middleware(...)]`
 * The return type of the controller method must be either `Psr\Http\Message\ResponseInterface` or `Beauty\Http\Response\Contracts\ResponsibleInterface`
 
----
 
 Once defined, this route will automatically be registered on app boot — no manual wiring required.
 

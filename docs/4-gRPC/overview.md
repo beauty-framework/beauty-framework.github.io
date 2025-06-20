@@ -8,7 +8,6 @@ The Beauty Framework provides optional support for **gRPC services** via the `be
 
 > ⚠️ This is an **optional module**. You need to install and configure it manually.
 
----
 
 ## 📦 Installation
 
@@ -48,7 +47,6 @@ grpcgen:
 
 And add `grpcgen` to the `.PHONY` section.
 
----
 
 ## 🔧 Configuration
 
@@ -100,7 +98,6 @@ return [
 ];
 ```
 
----
 
 ## 📐 Compiling Protobuf Files
 
@@ -131,7 +128,6 @@ protoc \
   proto/helloworld.proto
 ```
 
----
 
 ## 🚀 Example Service
 ```protobuf
@@ -192,15 +188,12 @@ $registry->registerFromAttributes($grpcConfig['services']);
 $server->serve(Worker::create());
 ```
 
----
-
 ## 🔗 Resources
 
 - RoadRunner gRPC docs: https://docs.roadrunner.dev/docs/plugins/grpc
 - Example app: https://github.com/beauty-framework/example-grpc
 - This package repo: https://github.com/beauty-framework/grpc
 
----
 
 ## 📝 Notes
 

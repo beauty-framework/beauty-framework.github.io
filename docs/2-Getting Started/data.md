@@ -8,7 +8,6 @@ Beauty Framework provides a clean and lightweight way to interact with databases
 
 > ⚠️ The ORM is currently under development — this approach gives you full control in the meantime.
 
----
 
 ## 🧱 Example: UserRepository
 
@@ -81,7 +80,6 @@ class UserRepository implements UserRepositoryInterface
 }
 ```
 
----
 
 ## 🧩 Entity Example
 
@@ -108,7 +106,6 @@ final readonly class User
 }
 ```
 
----
 
 ## 🧾 Dependency Binding
 
@@ -123,7 +120,6 @@ $container->bind(UserRepositoryInterface::class, UserRepository::class);
 
 All services and controllers will receive the implementation automatically via DI.
 
----
 
 ## ⚙️ Raw SQL Power
 
@@ -137,7 +133,6 @@ public function transaction(callable $callback): mixed;
 
 You have full control over performance, queries, and batching.
 
----
 
 ## 💡 Notes
 

@@ -8,7 +8,6 @@ Middleware in Beauty Framework follow the [PSR-15](https://www.php-fig.org/psr/p
 
 You can register middleware globally or attach them to specific routes or controllers using PHP attributes.
 
----
 
 ## 🛠 CLI Generator
 
@@ -22,7 +21,6 @@ make beauty generate:middleware AuthMiddleware
 
 This creates a new file in `app/Middlewares/` with a ready-to-use class.
 
----
 
 ## ✨ Example: AuthMiddleware
 
@@ -67,11 +65,9 @@ class AuthMiddleware extends AbstractMiddleware
 
 This middleware extracts the bearer token from the `Authorization` header, checks it using a token repository, and injects the authenticated user into the request. If the token is missing or invalid, an exception is thrown, interrupting the flow.
 
----
 
 This allows type-safe injection of `HttpRequest` instead of raw `ServerRequestInterface`.
 
----
 
 ## 🧭 How to Apply Middleware
 
@@ -115,7 +111,6 @@ public function index(HttpRequest $request): ResponseInterface
 
 You can stack multiple middlewares with multiple `#[Middleware(...)]` annotations.
 
----
 
 ## 💡 Notes
 

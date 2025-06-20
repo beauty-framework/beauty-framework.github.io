@@ -65,7 +65,6 @@ return array_merge(
 );
 ```
 
----
 
 ## 🎨 CLI Output Formatting
 

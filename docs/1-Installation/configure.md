@@ -6,7 +6,6 @@ sidebar_position: 3
 
 Beauty Framework uses a simple and flexible configuration system powered by PHP config files and environment variables.
 
----
 
 ## 🗂 Config Files
 
@@ -26,7 +25,6 @@ To access configuration values in your code, use the `config()` helper:
 $name = config('app.name'); // returns 'Beauty Framework' by default
 ```
 
----
 
 ## 🌍 Environment Variables
 
@@ -40,7 +38,6 @@ This makes it easy to override values per environment without touching the confi
 
 The `.env` file should be committed as `.env.example` and copied to `.env` locally during setup.
 
----
 
 ## ⚙️ Dependency Bindings
 
@@ -54,7 +51,6 @@ This is a good place to configure services, interfaces, and third-party integrat
 
 > More about the container and service providers will be covered in a dedicated section.
 
----
 
 ## ⚙️ RoadRunner Configuration
 

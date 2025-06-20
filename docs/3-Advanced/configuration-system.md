@@ -25,7 +25,6 @@ public function __construct(
 }
 ```
 
----
 
 ## 🗂 Directory Structure
 
@@ -43,7 +42,6 @@ config/
 └── services.php
 ```
 
----
 
 ## 🧩 Nested Keys
 
@@ -53,13 +51,11 @@ You can use dot notation to access deeply nested values:
 config('database.connections.pgsql.port'); // 5432
 ```
 
----
 
 ## 🚀 Caching
 
 Internally, the configuration system caches parsed configs for fast access. You don’t need to manually warm up anything.
 
----
 
 ## 🧱 Extensibility
 
@@ -82,13 +78,11 @@ Access:
 config('image.max_width'); // 1920
 ```
 
----
 
 ## 📁 Configuration Loader
 
 The internal loader is responsible for recursively loading all files in `config/`. It also supports environment overrides and ensures immutability after boot (unless explicitly allowed).
 
----
 
 ## 🛠 Where It's Defined
 
@@ -98,7 +92,6 @@ The main configuration loader is registered in:
 App\Container\Config\RegisterConfig
 ```
 
----
 
 ## 📚 Related Docs
 

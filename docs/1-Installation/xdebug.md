@@ -8,7 +8,6 @@ This guide helps you set up xDebug inside a Docker container with PhpStorm for l
 
 > ⚠️ Note: If you're using the default Docker setup from `make up`, xDebug is already installed and configured.
 
----
 
 ## ⚙️ xDebug PHP Configuration
 
@@ -30,7 +29,6 @@ xdebug.client_port=9003
 
 > 🔧 Port `9003` is the default PhpStorm debugger port.
 
----
 
 ## 🐳 docker-compose.yml
 
@@ -46,8 +44,6 @@ services:
     volumes:
       - ./:/var/www/html
 ```
-
----
 
 ## 🧐 PhpStorm Configuration
 
@@ -95,7 +91,6 @@ services:
 ![Step 5](telegram-cloud-photo-size-2-5366060074822402610-y.jpg)
 </details>
 
----
 
 ## ✅ Testing
 

@@ -6,7 +6,6 @@ sidebar_position: 1
 
 Beauty Framework can be installed either via Docker (recommended) or manually using Composer and RoadRunner.
 
----
 
 ## 🚀 Recommended: Docker Setup
 
@@ -223,7 +222,6 @@ services:
   </details>
 </details>
 
----
 
 ## 🛠 Manual Installation
 
@@ -247,7 +245,6 @@ composer install
 ./rr serve
 ```
 
----
 
 ## ✅ Requirements
 
@@ -261,6 +258,5 @@ composer install
 
 > For the best developer experience, Docker is highly recommended.
 
----
 
 Once installed, you’re ready to explore routing, controllers, middleware, jobs, and everything Beauty has to offer.

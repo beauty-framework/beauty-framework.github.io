@@ -6,7 +6,6 @@ sidebar_position: 5
 
 In Beauty Framework, exceptions are the primary way to interrupt the request flow and return error responses. This approach keeps your controller and middleware logic clean while maintaining full control over the HTTP response.
 
----
 
 ## 🔥 Example: Unauthorized Access
 
@@ -27,7 +26,6 @@ If an exception is thrown anywhere in your middleware, controller, or service, i
 
 With HTTP status code: `401 Unauthorized`
 
----
 
 ## 🧱 Custom Exceptions
 
@@ -43,7 +41,6 @@ class UnauthorizedException extends \Exception
 
 > You can also override the constructor of your custom exception to simplify message handling or pass additional data. This gives you full flexibility over how errors are represented and returned.
 
----
 
 ## ⚙️ Built-in Exception Support
 
@@ -54,7 +51,6 @@ Beauty Framework provides built-in support for:
 
 The exception system is extremely flexible — you can define and handle any exception type the way you want, whether globally in the worker or locally in your code. No strict interface or inheritance is required.
 
----
 
 ## ⚙️ Custom Exception Flow
 
