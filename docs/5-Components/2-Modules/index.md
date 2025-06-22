@@ -2,6 +2,8 @@
 
 Beauty Framework is modular by design: all extra features, domain logic, and integrations are delivered as isolated modules. This approach keeps your app fast, clean, and focused—only use what you need.
 
+> ⚠️ This is an **optional module**. You need to install and configure it manually.
+
 
 ## Installing module support
 

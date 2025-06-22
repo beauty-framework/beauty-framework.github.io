@@ -16,6 +16,8 @@ composer create-project beauty-framework/app my-service
 cd my-service
 ```
 
+> If you need a template configured for modularity, you can install it using this command: `composer create-project beauty-framework/module-app beauty-framework`
+
 ### 2. Copy the environment file:
 
 ```bash
