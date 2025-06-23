@@ -8,6 +8,8 @@ This package provides powerful and extensible Collection, PaginatedCollection an
 ## Installation
 
 ```bash
+make composer require beauty-framework/collection
+# or without Docker
 composer require beauty-framework/collection
 ```
 
