@@ -17,6 +17,43 @@ composer require beauty-framework/module-support
 
 This package enables first-class module generation, autoloading, and seamless integration for modular development.
 
+The next step is to write the routing in the config `config/router.php`:
+```php {3}
+return [
+    'controllers' => [
+        __DIR__ . '/../modules/*/src/Controllers/**/*Controller.php',
+    ],
+];
+```
+
+And at the last step, in `bootstrap/kernel.php` add
+```php {2}
+$bootstrap = new class {
+    use \Beauty\Module\Core\HasModuleSupportTrait;
+
+    /**
+     * @return object
+     * @property array $middlewares
+     * @property ContainerManager $containerManager
+     * @property array $routerConfig
+     */
+    public function boot(): object
+    {
+    // ...
+    }
+
+    // ...
+}
+```
+
+And in the same file, in the `initContainerManager` method, add the following to line `83`:
+```php {3}
+        return ContainerManager::bootFrom(array_merge(
+            $containers,
+            $this->findModuleContainerClasses(),
+            [Config::class, Base::class, DI::class]
+        ));
+```
 
 ## Generating a new module
 
@@ -98,3 +135,8 @@ composer update
 * Compose your app from building blocks—no unnecessary overhead
 
 For advanced usage (custom stubs, more folders, code templates) see the **Advanced** section in the docs.
+
+If the project is new, you can install a template with preconfigured modularity using the command ([Install documentaion](../../1-Installation/install.md)):
+```bash
+composer create-project beauty-framework/module-app my-service
+```
