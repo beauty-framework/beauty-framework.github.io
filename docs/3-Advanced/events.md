@@ -109,7 +109,7 @@ class SomeService
 
 Listeners are registered in your project in `config/event-listeners.php`:
 
-```php
+```php title="config/event-listeners.php"
 <?php
 declare(strict_types=1);
 

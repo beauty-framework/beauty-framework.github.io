@@ -60,7 +60,7 @@ public function listProducts() { ... }
 
 Add to `config/commands.php`:
 
-```php {3}
+```php {3} title="config/commands.php"
 return array_merge(
     // ...
     \Beauty\OpenApi\Console\RegisterCommands::commands(),
@@ -76,7 +76,7 @@ return array_merge(
 ## Switching Documentation UI
 You can control which documentation UI is shown at `/docs/api` by setting the `OPENAPI_MODE` variable in your `.env` file:
 
-```dotenv
+```bash title=".env"
 OPENAPI_MODE=stoplight # or swagger, redoc, rapid
 ```
 

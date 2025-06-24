@@ -18,7 +18,7 @@ composer require beauty-framework/module-support
 This package enables first-class module generation, autoloading, and seamless integration for modular development.
 
 The next step is to write the routing in the config `config/router.php`:
-```php {3}
+```php {3} title="config/router.php"
 return [
     'controllers' => [
         __DIR__ . '/../modules/*/src/Controllers/**/*Controller.php',
@@ -27,7 +27,7 @@ return [
 ```
 
 And at the last step, in `bootstrap/kernel.php` add
-```php {2}
+```php {2} title="bootstrap/kernel.php"
 $bootstrap = new class {
     use \Beauty\Module\Core\HasModuleSupportTrait;
 
@@ -47,7 +47,7 @@ $bootstrap = new class {
 ```
 
 And in the same file, in the `initContainerManager` method, add the following to line `83`:
-```php {3}
+```php {3} title="bootstrap/kernel.php"
         return ContainerManager::bootFrom(array_merge(
             $containers,
             $this->findModuleContainerClasses(),
@@ -111,7 +111,7 @@ modules/blog/
 
 To enable module-related CLI commands everywhere, edit your `config/commands.php`:
 
-```php {3}
+```php {3} title="config/commands.php"
 return [
     ...
     \Beauty\Module\Console\RegisterCommands::commands(),

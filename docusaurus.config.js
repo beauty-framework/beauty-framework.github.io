@@ -138,7 +138,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: ['php', 'phpdoc', 'php-extras', 'makefile', 'protobuf', 'bash', 'docker', 'plant-uml', 'json', 'git', 'sql', 'mongodb']
+        additionalLanguages: ['php', 'phpdoc', 'php-extras', 'makefile', 'protobuf', 'bash', 'docker', 'plant-uml', 'json', 'git', 'sql', 'mongodb', 'log', 'ini']
       },
     }),
 };

@@ -55,7 +55,7 @@ If any exception is thrown — the transaction is rolled back.
 
 Database drivers are configured in `config/database.php`. Here's a sample structure:
 
-```php
+```php title="config/database.php"
 <?php
 
 return [
@@ -126,7 +126,7 @@ class OracleDriver implements DriverInterface
 }
 ```
 2. Add connection to `config/database.php` in `connections` section:
-```php
+```php title="config/database.php"
 return [
     'default' => 'pgsql',
     'connections' => [
@@ -143,7 +143,7 @@ return [
 ```
 3. Register it into `ConnectionFactory`:
 
-```php
+```php title="app/Container/Database.php"
 $factory = new ConnectionFactory([
     // ...
     new OracleDriver(),

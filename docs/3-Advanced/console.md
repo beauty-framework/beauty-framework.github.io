@@ -55,7 +55,7 @@ class MyCommand extends AbstractCommand
 
 Register your commands in `config/commands.php`:
 
-```php
+```php {5} title="config/commands.php"
 return array_merge(
     \Beauty\Core\Console\RegisterCommands::commands(),
     class_exists(\Beauty\Jobs\Console\RegisterCommands::class) ? \Beauty\Jobs\Console\RegisterCommands::commands() : [],

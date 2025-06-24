@@ -36,7 +36,7 @@ class UserService
 
 Caching behavior is configured in `config/cache.php`:
 
-```php
+```php title="config/cache.php"
 return [
     'default' => env('CACHE_DRIVER', 'redis'),
 
@@ -139,7 +139,7 @@ class MemcachedCacheDriver implements CacheDriverInterface
 ```
 
 And registry in `config/cache.php` in `stores` section:
-```php
+```php title="config/cache.php"
 return [
     'default' => env('CACHE_DRIVER', 'redis'),
     'stores' => [
@@ -152,7 +152,7 @@ return [
 ```
 
 Add `App\Container\Cache` in factory:
-```php
+```php title="app/Container/Cache.php"
         $factory = new CacheFactory([
             new RedisCacheDriver(),
             new KVCacheDriver(),

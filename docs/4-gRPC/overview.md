@@ -52,7 +52,7 @@ And add `grpcgen` to the `.PHONY` section.
 
 Update `.rr.yaml`:
 
-```yaml
+```yaml title=".rr.yaml"
 grpc:
   listen: tcp://0.0.0.0:51015
   pool:
@@ -70,7 +70,7 @@ reload:
 
 Update `docker-compose.yml`:
 
-```yaml
+```yaml {4} title="docker-compose.yml"
 services:
   app:
     ports:
@@ -79,7 +79,7 @@ services:
 
 Update `composer.json` autoload:
 
-```json
+```json title="composer.json"
 "autoload": {
   "psr-4": {
     "App\\": "app/",
@@ -90,7 +90,7 @@ Update `composer.json` autoload:
 
 Create `config/grpc.php`:
 
-```php
+```php title="config/grpc.php"
 return [
     'services' => [
         __DIR__ . '/../app/Controllers/GRPC/**/*.php',
