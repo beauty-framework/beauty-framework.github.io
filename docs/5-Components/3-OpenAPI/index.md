@@ -71,19 +71,36 @@ return array_merge(
 4. **Access your docs at:**
 
 * `/openapi.json` for up-to-date OpenAPI spec
-* `/docs/api` for Redoc-powered interactive docs
+* `/docs/api` for Stoplight-powered interactive docs
+
+## Switching Documentation UI
+You can control which documentation UI is shown at `/docs/api` by setting the `OPENAPI_MODE` variable in your `.env` file:
+
+```dotenv
+OPENAPI_MODE=stoplight # or swagger, redoc, rapid
+```
+
+**Supported values:**
+- stoplight (default)
+- swagger
+- redoc
+- rapid
+
+The selected viewer will be automatically rendered at `/docs/api` depending on this value.
+
+If you provide an invalid value, Stoplight will be used by default.
 
 ## Customization
 
-* Override `redoc()` or `openApiJson()` methods in your controller to change the output.
-* Redoc page can be replaced or extended as needed.
+* Override `documentation()` or `openApiJson()` methods in your controller to change the output.
+* Docs page can be replaced or extended as needed.
 * You can provide your own action classes (see `SpecsAction` and `RedocAction`) to control exactly how spec and documentation UI are served.
 
   Example:
 
   ```php
   #[Route(method: HttpMethodsEnum::GET, path: '/documentation')]
-  public function openApiJson(RedocAction $action): ResponseInterface
+  public function docs(RedocAction $action): ResponseInterface
   {
       return $action();
   }
@@ -93,7 +110,7 @@ return array_merge(
 ## How it works
 
 * At runtime, `SpecsAction` uses `OpenApiGenerator` to scan your codebase and build the OpenAPI spec (`/openapi.json`).
-* `RedocAction` renders a Redoc UI page pointing to `/openapi.json`.
+* `RedocAction` renders a Redoc UI page pointing to `/openapi.json` (other DocActions work like RedocAction).
 * For production, you can pre-generate the spec with the CLI command and serve it as a static file for best performance.
 
 ## Static Generation
