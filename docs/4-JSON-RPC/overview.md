@@ -179,7 +179,7 @@ return [
 ## Useful Links
 
 * JSON-RPC 2.0 Spec: [https://www.jsonrpc.org/specification](https://www.jsonrpc.org/specification)
-* Github: [https://github.com/beauty-framework/jsonrpc](https://github.com/beauty-framework/jsonrpc)
+* Github: [https://github.com/beauty-framework/jsonrpc](https://github.com/beauty-framework/json-rpc)
 
 
 ## Why JSON-RPC?
