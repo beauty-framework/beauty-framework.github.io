@@ -15,9 +15,9 @@ This package adds first-class JSON-RPC 2.0 support to the Beauty Framework. Itâ€
 Install the package via Composer:
 
 ```bash
-make composer require beauty-framework/jsonrpc
+make composer require beauty-framework/json-rpc
 # Or without Docker
-composer require beauty-framework/jsonrpc
+composer require beauty-framework/json-rpc
 ```
 
 
